@@ -6,40 +6,43 @@ namespace KellerApi.Data
 {
     public class KellerDbContext:DbContext
     {
-        public KellerDbContext(DbContextOptions<KellerDbContext> options):base(options)
-        {
-        }
+        public KellerDbContext(DbContextOptions<KellerDbContext> options):base(options){
+                }
+       
+
         public DbSet<Question> Questions{ get; set; }
 
-
-
-
-
-
-
-        protected override void OnModelCreating(ModelBuilder builder)
+        
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
-
-
-            builder.Entity<Question>().HasData(
+            base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.Entity<Question>().HasData(
                 new Question
                 {
                     Id = 1,
-                    Quest = "Q. Dummy text lorem ipsum dolor sit amet",
-                    Answer = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa culpa ea suscipit animi, reprehenderit incidunt nostrum voluptas, nihil ipsum quaerat, dolore magni veritatis aliquid? Illo delectus eligendi ullam nobis sint ad possimus! Expedita id asperiores veniam sunt dolores corrupti, quam odit blanditiis est enim distinctio quidem ut dignissimos, vel harum?"
+                    Quest = "Question1",
+                    Answer = "Answer1"
                 },
                 new Question
                 {
                     Id = 2,
-                    Quest = "Q. Dummy text lorem ipsum dolor sit amet",
-                    Answer = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa culpa ea suscipit animi, reprehenderit incidunt nostrum voluptas, nihil ipsum quaerat, dolore magni veritatis aliquid? Illo delectus eligendi ullam nobis sint ad possimus! Expedita id asperiores veniam sunt dolores corrupti, quam odit blanditiis est enim distinctio quidem ut dignissimos, vel harum?"
+                    Quest = "Question2",
+                    Answer = "Answer2"
+                },
+                new Question
+                {
+                    Id = 3,
+                    Quest = "Question3",
+                    Answer = "Answer3"
                 }
-
-
                 );
-    }
+        }
+       
 
     }
    
+
+
 }

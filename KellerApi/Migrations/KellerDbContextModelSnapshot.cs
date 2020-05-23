@@ -41,14 +41,20 @@ namespace KellerApi.Migrations
                         new
                         {
                             Id = 1,
-                            Answer = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa culpa ea suscipit animi, reprehenderit incidunt nostrum voluptas, nihil ipsum quaerat, dolore magni veritatis aliquid? Illo delectus eligendi ullam nobis sint ad possimus! Expedita id asperiores veniam sunt dolores corrupti, quam odit blanditiis est enim distinctio quidem ut dignissimos, vel harum?",
-                            Quest = "Q. Dummy text lorem ipsum dolor sit amet"
+                            Answer = "Answer1",
+                            Quest = "Question1"
                         },
                         new
                         {
                             Id = 2,
-                            Answer = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa culpa ea suscipit animi, reprehenderit incidunt nostrum voluptas, nihil ipsum quaerat, dolore magni veritatis aliquid? Illo delectus eligendi ullam nobis sint ad possimus! Expedita id asperiores veniam sunt dolores corrupti, quam odit blanditiis est enim distinctio quidem ut dignissimos, vel harum?",
-                            Quest = "Q. Dummy text lorem ipsum dolor sit amet"
+                            Answer = "Answer2",
+                            Quest = "Question2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Answer = "Answer3",
+                            Quest = "Question3"
                         });
                 });
 #pragma warning restore 612, 618

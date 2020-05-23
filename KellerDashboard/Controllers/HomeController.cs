@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using KellerDashboard.Models;
+using KellerApi.Data;
+using System.Linq;
 
 namespace KellerDashboard.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        KellerDbContext context;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -20,6 +18,7 @@ namespace KellerDashboard.Controllers
 
         public IActionResult Index()
         {
+            return Ok(context.Questions.ToList();
             return View();
         }
 

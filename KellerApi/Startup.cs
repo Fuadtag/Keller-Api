@@ -28,7 +28,9 @@ namespace KellerApi
                                                      .WithMethods("Get")
                                                      .AllowAnyHeader());
             });
-            services.AddDbContext<KellerDbContext>(options => options.UseSqlServer(Configuration["Db"]));
+
+            services.AddDbContext<KellerDbContext>(options =>
+                options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +44,6 @@ namespace KellerApi
 
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
             app.UseCors("AllowOrigin");
 
@@ -52,6 +53,7 @@ namespace KellerApi
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }
