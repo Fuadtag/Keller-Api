@@ -11,9 +11,13 @@ namespace KellerApi.Data
        
 
         public DbSet<Question> Questions{ get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
-        
-        
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -39,6 +43,10 @@ namespace KellerApi.Data
                 }
                 );
         }
+
+        
+        
+        public DbSet<KellerApi.Data.Entities.Setting> Setting { get; set; }
        
 
     }

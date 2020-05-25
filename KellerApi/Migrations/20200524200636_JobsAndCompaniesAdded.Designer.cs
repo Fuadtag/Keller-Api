@@ -4,14 +4,16 @@ using KellerApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace KellerApi.Migrations
 {
     [DbContext(typeof(KellerDbContext))]
-    partial class KellerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200524200636_JobsAndCompaniesAdded")]
+    partial class JobsAndCompaniesAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
