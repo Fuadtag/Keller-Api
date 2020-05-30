@@ -8,7 +8,10 @@ namespace KellerApi.Data
     {
         public KellerDbContext(DbContextOptions<KellerDbContext> options):base(options){
                 }
-       
+
+        public KellerDbContext()
+        {
+        }
 
         public DbSet<Question> Questions{ get; set; }
         public DbSet<Account> Accounts { get; set; }
